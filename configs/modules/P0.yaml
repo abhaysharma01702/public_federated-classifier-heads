@@ -1,0 +1,9 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Pilot: linear and CNN-BiLSTM, FedAvg, seed 0, 20 rounds; benchmark of every head.
+# Predicted 0.26 GPU hours: lanes 0.26 hours (measured speeds).
+module: P0
+platform: ada
+calibrate: true
+lanes:
+  - - {experiment: E0, method: fedavg, setting: iid12, seed: 0, set: [model.head=linear, fl.rounds=20]}
+    - {experiment: E0, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn_bilstm, fl.rounds=20]}

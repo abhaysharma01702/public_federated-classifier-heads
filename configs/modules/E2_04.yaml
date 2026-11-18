@@ -1,0 +1,11 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Experiment 2 part 4: main comparison, 200 rounds, tuned head learning rates.
+# Predicted 4.56 GPU hours: lanes 4.56 hours (measured speeds).
+module: E2_04
+platform: ada
+calibrate: false
+lanes:
+  - - {experiment: E2, method: centralized, setting: iid12, seed: 0, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+    - {experiment: E2, method: local_only, setting: iid12, seed: 0, set: [model.head=linear, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E2, method: local_only, setting: iid12, seed: 0, set: [model.head=cnn, fl.rounds=200, train.lr_head=3.0e-4]}
+    - {experiment: E2, method: local_only, setting: iid12, seed: 0, set: [model.head=mlp, fl.rounds=200, train.lr_head=1.0e-3]}

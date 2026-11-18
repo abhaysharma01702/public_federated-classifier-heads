@@ -1,0 +1,22 @@
+{
+  "best_round": 110,
+  "best_validation_mean_f1": 0.7145991447739216,
+  "hours": 1.0136,
+  "run_id": "E2-iid12-centralized-attention-s1-6c23a0",
+  "test_best_by_language": {
+    "bn": 0.6112125136630938,
+    "en": 0.7013067054606532,
+    "hi": 0.7418128668621097,
+    "mr": 0.7803757494141745
+  },
+  "test_best_mean_f1": 0.7086769588500078,
+  "test_best_worst_f1": 0.6112125136630938,
+  "test_final_by_language": {
+    "bn": 0.6179889992408498,
+    "en": 0.6951821539859634,
+    "hi": 0.7365995615997094,
+    "mr": 0.7888808542075904
+  },
+  "test_final_mean_f1": 0.7096628922585283,
+  "test_final_worst_f1": 0.6179889992408498
+}

@@ -1,0 +1,10 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Experiment 3 part 10: label skew (FedAvg at alpha 0.1 and 0.5, FedProx at 0.1), 200 rounds.
+# Predicted 3.75 GPU hours: lanes 3.75 hours (measured speeds).
+module: E3_10
+platform: ada
+calibrate: false
+lanes:
+  - - {experiment: E3, method: fedavg, setting: dir05, seed: 1, set: [model.head=attention, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E3, method: fedavg, setting: dir05, seed: 1, set: [model.head=bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+    - {experiment: E3, method: fedavg, setting: dir05, seed: 1, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}

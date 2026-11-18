@@ -1,0 +1,16 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Experiment 5 (Kaggle) part 3: 6 clients, FedAvg, 200 rounds.
+# Predicted 5.25 GPU hours: lanes 2.44 and 2.82 hours (measured speeds).
+module: E5_K3
+platform: kaggle
+calibrate: true
+lanes:
+  - - {experiment: E5, method: fedavg, setting: iid6, seed: 0, set: [model.head=linear, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid6, seed: 0, set: [model.head=mlp, fl.rounds=200, train.lr_head=1.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid6, seed: 1, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+    - {experiment: E5, method: fedavg, setting: iid6, seed: 2, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+  - - {experiment: E5, method: fedavg, setting: iid6, seed: 0, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+    - {experiment: E5, method: fedavg, setting: iid6, seed: 1, set: [model.head=linear, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid6, seed: 1, set: [model.head=mlp, fl.rounds=200, train.lr_head=1.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid6, seed: 2, set: [model.head=linear, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid6, seed: 2, set: [model.head=mlp, fl.rounds=200, train.lr_head=1.0e-3]}

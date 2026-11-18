@@ -1,0 +1,5 @@
+# FedAdam: server Adam on the mean client update (Reddi et al., 2021). The server rate is tuned (3 values).
+strategy:
+  name: fedadam
+  mode: federated
+  server: {name: adam, lr: 1.0e-2, beta1: 0.9, beta2: 0.99, tau: 1.0e-3}

@@ -1,0 +1,11 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Experiment 3, FedAdam part 1: alpha 0.1, server rate 0.01, 200 rounds.
+# Predicted 4.12 GPU hours: lanes 4.12 hours (measured speeds).
+module: E3A_01
+platform: ada
+calibrate: false
+lanes:
+  - - {experiment: E3, method: fedadam, setting: dir01, seed: 0, set: [model.head=linear, fl.rounds=200, strategy.server.lr=0.01, train.lr_head=3.0e-3]}
+    - {experiment: E3, method: fedadam, setting: dir01, seed: 0, set: [model.head=cnn, fl.rounds=200, strategy.server.lr=0.01, train.lr_head=3.0e-4]}
+    - {experiment: E3, method: fedadam, setting: dir01, seed: 0, set: [model.head=mlp, fl.rounds=200, strategy.server.lr=0.01, train.lr_head=1.0e-3]}
+    - {experiment: E3, method: fedadam, setting: dir01, seed: 0, set: [model.head=attention, fl.rounds=200, strategy.server.lr=0.01, train.lr_head=3.0e-3]}

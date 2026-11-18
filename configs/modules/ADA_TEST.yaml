@@ -1,0 +1,10 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Tiny check runs for the first Ada job, after tokenizing.
+# Predicted 0.07 GPU hours: lanes 0.07 hours (measured speeds).
+module: ADA_TEST
+platform: ada
+calibrate: true
+lanes:
+  - - {experiment: T, method: fedavg, setting: iid12, seed: 0, set: [fl.rounds=2, fl.eval_every=2, train.local_steps=1]}
+    - {experiment: T, method: local_only, setting: iid12, seed: 0, set: [fl.rounds=2, fl.eval_every=2, train.local_steps=1]}
+    - {experiment: T, method: centralized, setting: iid12, seed: 0, set: [fl.rounds=2, fl.eval_every=2, train.local_steps=1]}

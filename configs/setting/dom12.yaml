@@ -1,0 +1,6 @@
+# Experiment 4: 12 clients as in experiment 2; Marathi's 5 clients each hold one
+# domain (political tweets, the largest, split over two); other languages IID as in iid12.
+setting_cfg:
+  partition: domain
+  domain_languages: [mr]
+  clients: {mr: 5, en: 4, bn: 2, hi: 1}

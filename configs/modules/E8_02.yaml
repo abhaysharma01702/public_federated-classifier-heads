@@ -1,0 +1,9 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Experiment 8 part 2: two classes without neutral, FedAvg, seed 0, 200 rounds.
+# Predicted 2.61 GPU hours: lanes 2.61 hours (measured speeds).
+module: E8_02
+platform: ada
+calibrate: false
+lanes:
+  - - {experiment: E8, method: fedavg, setting: iid12_2c, seed: 0, set: [model.head=bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+    - {experiment: E8, method: fedavg, setting: iid12_2c, seed: 0, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}

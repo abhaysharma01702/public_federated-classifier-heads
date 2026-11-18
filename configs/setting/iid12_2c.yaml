@@ -1,0 +1,9 @@
+# experiment 8 (appendix): the iid12 setting with neutral removed from every
+# split; negative stays 0, positive becomes 1; two-class heads. Main study stays three classes.
+setting_cfg:
+  partition: iid
+  clients: {mr: 5, en: 4, bn: 2, hi: 1}
+data:
+  drop_neutral: true
+model:
+  n_classes: 2

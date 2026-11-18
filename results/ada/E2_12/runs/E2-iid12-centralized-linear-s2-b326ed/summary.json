@@ -1,0 +1,22 @@
+{
+  "best_round": 185,
+  "best_validation_mean_f1": 0.7205142977015583,
+  "hours": 0.8469,
+  "run_id": "E2-iid12-centralized-linear-s2-b326ed",
+  "test_best_by_language": {
+    "bn": 0.6485404405796188,
+    "en": 0.6908234049325257,
+    "hi": 0.7226357871519161,
+    "mr": 0.7832566495556438
+  },
+  "test_best_mean_f1": 0.711314070554926,
+  "test_best_worst_f1": 0.6485404405796188,
+  "test_final_by_language": {
+    "bn": 0.615807362661365,
+    "en": 0.6824959105037176,
+    "hi": 0.7261078223870627,
+    "mr": 0.7769905247318784
+  },
+  "test_final_mean_f1": 0.700350405071006,
+  "test_final_worst_f1": 0.615807362661365
+}

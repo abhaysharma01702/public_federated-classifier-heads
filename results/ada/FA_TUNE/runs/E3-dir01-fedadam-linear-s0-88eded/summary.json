@@ -1,0 +1,22 @@
+{
+  "best_round": 55,
+  "best_validation_mean_f1": 0.6220254862635668,
+  "hours": 0.4427,
+  "run_id": "E3-dir01-fedadam-linear-s0-88eded",
+  "test_best_by_language": {
+    "bn": 0.541539716643099,
+    "en": 0.4796179592106262,
+    "hi": 0.704509372207529,
+    "mr": 0.7333937747048279
+  },
+  "test_best_mean_f1": 0.6147652056915205,
+  "test_best_worst_f1": 0.4796179592106262,
+  "test_final_by_language": {
+    "bn": 0.5346240069338489,
+    "en": 0.4492073457541102,
+    "hi": 0.6850036119408814,
+    "mr": 0.7341789649904545
+  },
+  "test_final_mean_f1": 0.6007534824048238,
+  "test_final_worst_f1": 0.4492073457541102
+}

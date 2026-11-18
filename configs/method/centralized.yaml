@@ -1,0 +1,2 @@
+# Centralized: all training data pooled, one model, total sequences matched to FedAvg.
+strategy: {name: centralized, mode: centralized}

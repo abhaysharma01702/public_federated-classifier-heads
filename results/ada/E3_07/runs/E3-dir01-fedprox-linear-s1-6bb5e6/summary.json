@@ -1,0 +1,22 @@
+{
+  "best_round": 140,
+  "best_validation_mean_f1": 0.6846660382140305,
+  "hours": 1.0165,
+  "run_id": "E3-dir01-fedprox-linear-s1-6bb5e6",
+  "test_best_by_language": {
+    "bn": 0.5819898112222283,
+    "en": 0.6913226937309863,
+    "hi": 0.708464000824557,
+    "mr": 0.7594911692578515
+  },
+  "test_best_mean_f1": 0.6853169187589058,
+  "test_best_worst_f1": 0.5819898112222283,
+  "test_final_by_language": {
+    "bn": 0.561154264028473,
+    "en": 0.65876729564038,
+    "hi": 0.721818747902739,
+    "mr": 0.7446108403000288
+  },
+  "test_final_mean_f1": 0.6715877869679052,
+  "test_final_worst_f1": 0.561154264028473
+}

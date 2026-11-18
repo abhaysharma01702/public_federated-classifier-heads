@@ -1,0 +1,12 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Experiment 4 (Kaggle) part 1: Marathi clients by domain, FedAvg, 200 rounds.
+# Predicted 5.40 GPU hours: lanes 3.32 and 2.08 hours (measured speeds).
+module: E4_K1
+platform: kaggle
+calibrate: true
+lanes:
+  - - {experiment: E4, method: fedavg, setting: dom12, seed: 0, set: [model.head=linear, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E4, method: fedavg, setting: dom12, seed: 0, set: [model.head=mlp, fl.rounds=200, train.lr_head=1.0e-3]}
+    - {experiment: E4, method: fedavg, setting: dom12, seed: 0, set: [model.head=bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+  - - {experiment: E4, method: fedavg, setting: dom12, seed: 0, set: [model.head=cnn, fl.rounds=200, train.lr_head=3.0e-4]}
+    - {experiment: E4, method: fedavg, setting: dom12, seed: 0, set: [model.head=attention, fl.rounds=200, train.lr_head=3.0e-3]}

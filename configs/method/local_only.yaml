@@ -1,0 +1,2 @@
+# Local-only: each client trains alone for the steps it would get in FL.
+strategy: {name: local_only, mode: local_only}

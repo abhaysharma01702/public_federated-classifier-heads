@@ -1,0 +1,49 @@
+# Defaults. Method and setting configs, then overrides, are layered on top (runner/config.py).
+# Values marked "from earlier" are the earlier engine's defaults, kept until tuning (experiment 1).
+code_rev: 1
+
+seed: 0
+data_seed: 2026
+
+data:
+  languages: [mr, en, bn, hi]     # Marathi, English, Bengali, Hindi
+  max_len: 128
+  head_tokens: 64                 # longer texts keep their first 64 and last 64 tokens
+
+model:
+  backbone: xlmr
+  backbones:
+    xlmr: xlm-roberta-base
+  head: linear
+  dropout: 0.1
+  lora:                           # from earlier
+    r: 8
+    alpha: 16
+    dropout: 0.1
+    target_modules: [query, value]
+
+train:                            # from earlier
+  batch_sentences: 16
+  local_steps: 25
+  optimizer: adamw
+  lr_lora: 3.0e-4
+  lr_head: 1.0e-3
+  weight_decay: 0.01
+  grad_clip: 1.0
+  precision: fp16                 # T4 has no bf16
+
+fl:
+  rounds: 100                     # from earlier; the pilot uses 20
+  clients_per_round: 12
+  eval_every: 5
+  checkpoint_every: 10
+
+session:                          # Kaggle session guard
+  guard_line_hours: 10.5          # never start a run that could end after 10.5 h from SESSION_START
+  run_time_safety_factor: 1.2     # "could end": elapsed + 1.2 x predicted hours
+  end_margin_hours: 0.0
+
+session_ada:                      # Ada SLURM job guard: 6 h job limit
+  guard_line_hours: 5.5           # never start a run that could end after 5.5 h from job start
+  run_time_safety_factor: 1.2
+  end_margin_hours: 0.0

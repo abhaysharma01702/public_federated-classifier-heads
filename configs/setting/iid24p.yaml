@@ -1,0 +1,7 @@
+# Experiment 5, partial participation: 24 clients as iid24, but 12 of the 24 (half)
+# sampled each round, as reviewer 2 of the earlier manuscript asked (REVIEWS_TETCI.md).
+setting_cfg:
+  partition: iid
+  clients: {mr: 10, en: 8, bn: 4, hi: 2}
+fl:
+  clients_per_round: 12

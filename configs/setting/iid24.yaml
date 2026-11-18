@@ -1,0 +1,6 @@
+# Experiment 5: 24 clients, even labels, in proportion to the data as iid12; all clients train every round.
+setting_cfg:
+  partition: iid
+  clients: {mr: 10, en: 8, bn: 4, hi: 2}
+fl:
+  clients_per_round: 24

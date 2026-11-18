@@ -1,0 +1,10 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Tiny module for the local test of run_module.py; never run on Kaggle.
+# Predicted 0.07 GPU hours: lanes 0.04 and 0.03 hours (measured speeds).
+module: TEST
+platform: kaggle
+calibrate: true
+lanes:
+  - - {experiment: T, method: fedavg, setting: iid12, seed: 0, set: [fl.rounds=2, fl.eval_every=2, train.local_steps=1]}
+    - {experiment: T, method: centralized, setting: iid12, seed: 0, set: [fl.rounds=2, fl.eval_every=2, train.local_steps=1]}
+  - - {experiment: T, method: local_only, setting: iid12, seed: 0, set: [fl.rounds=2, fl.eval_every=2, train.local_steps=1]}

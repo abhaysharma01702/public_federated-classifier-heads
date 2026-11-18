@@ -1,0 +1,2 @@
+# FedAvg, weighted by client size, trainable parameters only.
+strategy: {name: fedavg, mode: federated}

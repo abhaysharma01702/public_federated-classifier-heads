@@ -1,0 +1,22 @@
+{
+  "best_round": 190,
+  "best_validation_mean_f1": 0.69847162231225,
+  "hours": 0.8614,
+  "run_id": "E4-dom12-fedavg-attention-s0-cdc994",
+  "test_best_by_language": {
+    "bn": 0.6051811827203241,
+    "en": 0.6962791369300462,
+    "hi": 0.7247462965786521,
+    "mr": 0.7658220766944693
+  },
+  "test_best_mean_f1": 0.6980071732308729,
+  "test_best_worst_f1": 0.6051811827203241,
+  "test_final_by_language": {
+    "bn": 0.5982769215193028,
+    "en": 0.6950823101306316,
+    "hi": 0.7403430932974046,
+    "mr": 0.7654206627833523
+  },
+  "test_final_mean_f1": 0.6997807469326729,
+  "test_final_worst_f1": 0.5982769215193028
+}

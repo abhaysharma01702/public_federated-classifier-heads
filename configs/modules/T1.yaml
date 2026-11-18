@@ -1,0 +1,15 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Tuning: head learning rate for linear and cnn, FedAvg, seed 0, 100 rounds.
+# Predicted 3.73 GPU hours: lanes 3.73 hours (measured speeds).
+module: T1
+platform: ada
+calibrate: false
+lanes:
+  - - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=linear, train.lr_head=1.0e-3]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn, train.lr_head=1.0e-3]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=linear, train.lr_head=3.0e-3]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn, train.lr_head=3.0e-3]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=linear, train.lr_head=3.0e-4]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn, train.lr_head=3.0e-4]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=linear, train.lr_head=1.0e-2]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn, train.lr_head=1.0e-2]}

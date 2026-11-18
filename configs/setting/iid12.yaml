@@ -1,0 +1,5 @@
+# Experiment 2: 12 clients, even labels within each language. The split per language is
+# provisional.
+setting_cfg:
+  partition: iid
+  clients: {mr: 5, en: 4, bn: 2, hi: 1}

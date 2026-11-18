@@ -1,0 +1,28 @@
+{
+  "_source": "Ada job 66832 (module P0), gnode053, NVIDIA GeForce RTX 2080 Ti, code 5deff46, 10 November 2026; copied from out/P0/module_report.json",
+  "eval_seq_per_s": 4378.99,
+  "load_seconds": 60.0,
+  "train_seq_per_s": 313.93,
+  "train_seq_per_s_by_head": {
+    "attention": 242.12,
+    "bilstm": 215.8,
+    "cnn": 301.94,
+    "cnn_bilstm": 208.51,
+    "linear": 313.93,
+    "linear_cls": 308.36,
+    "mlp": 242.49
+  },
+  "validation_rows": {
+    "bn": 1567,
+    "en": 2000,
+    "hi": 833,
+    "mr": 5998
+  },
+  "test_rows": {
+    "bn": 1586,
+    "en": 12282,
+    "hi": 833,
+    "mr": 6750
+  },
+  "_refit": "Per-head training speeds refitted on 11 November 2026 from the 24 tuning runs (T1 job 67531 gnode067; T2 67838 and T3 68243 gnode055): mean real hours of the 4 runs per head, minus evaluation and loading, taking the slower of benchmark and real. Before: {\"attention\": 266.19, \"bilstm\": 267.99, \"cnn\": 301.94, \"cnn_bilstm\": 271.87, \"linear\": 313.93, \"linear_cls\": 308.36, \"mlp\": 305.34}"
+}

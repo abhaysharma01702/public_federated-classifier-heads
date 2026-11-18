@@ -1,0 +1,9 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# FedAdam seed-2 linear and CNN on Ada: check of the collapse on Kaggle.
+# Predicted 1.82 GPU hours: lanes 1.82 hours (measured speeds).
+module: E3A_CHK
+platform: ada
+calibrate: false
+lanes:
+  - - {experiment: E3, method: fedadam, setting: dir01, seed: 2, set: [model.head=linear, fl.rounds=200, strategy.server.lr=0.01, train.lr_head=3.0e-3]}
+    - {experiment: E3, method: fedadam, setting: dir01, seed: 2, set: [model.head=cnn, fl.rounds=200, strategy.server.lr=0.01, train.lr_head=3.0e-4]}

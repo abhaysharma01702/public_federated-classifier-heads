@@ -1,0 +1,16 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Experiment 5, partial participation (Kaggle): 24 clients, 12 per round, FedAvg, 200 rounds.
+# Predicted 10.10 GPU hours: lanes 5.41 and 4.69 hours (measured speeds).
+module: E5P_K1
+platform: kaggle
+calibrate: true
+lanes:
+  - - {experiment: E5, method: fedavg, setting: iid24p, seed: 0, set: [model.head=linear, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid24p, seed: 0, set: [model.head=mlp, fl.rounds=200, train.lr_head=1.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid24p, seed: 1, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+    - {experiment: E5, method: fedavg, setting: iid24p, seed: 2, set: [model.head=linear, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid24p, seed: 2, set: [model.head=mlp, fl.rounds=200, train.lr_head=1.0e-3]}
+  - - {experiment: E5, method: fedavg, setting: iid24p, seed: 0, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+    - {experiment: E5, method: fedavg, setting: iid24p, seed: 1, set: [model.head=linear, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid24p, seed: 1, set: [model.head=mlp, fl.rounds=200, train.lr_head=1.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid24p, seed: 2, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}

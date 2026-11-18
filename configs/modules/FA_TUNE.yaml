@@ -1,0 +1,10 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# FedAdam server learning rate, linear head, alpha 0.1, seed 0, 100 rounds.
+# Predicted 1.37 GPU hours: lanes 1.37 hours (measured speeds).
+module: FA_TUNE
+platform: ada
+calibrate: false
+lanes:
+  - - {experiment: E3, method: fedadam, setting: dir01, seed: 0, set: [model.head=linear, strategy.server.lr=3.0e-3, train.lr_head=3.0e-3]}
+    - {experiment: E3, method: fedadam, setting: dir01, seed: 0, set: [model.head=linear, strategy.server.lr=1.0e-2, train.lr_head=3.0e-3]}
+    - {experiment: E3, method: fedadam, setting: dir01, seed: 0, set: [model.head=linear, strategy.server.lr=3.0e-2, train.lr_head=3.0e-3]}

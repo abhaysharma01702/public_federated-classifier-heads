@@ -1,0 +1,9 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Experiment 2, seed 0 local-only re-run part 2 (Kaggle), to save per-client models.
+# Predicted 2.78 GPU hours: lanes 1.37 and 1.41 hours (measured speeds).
+module: E2L_K2
+platform: kaggle
+calibrate: true
+lanes:
+  - - {experiment: E2, method: local_only, setting: iid12, seed: 0, set: [model.head=bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
+  - - {experiment: E2, method: local_only, setting: iid12, seed: 0, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}

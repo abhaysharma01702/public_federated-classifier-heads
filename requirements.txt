@@ -1,0 +1,9 @@
+torch>=2.1
+transformers>=4.44,<5
+peft>=0.12
+numpy
+pandas
+pyarrow
+pyyaml
+scikit-learn
+matplotlib

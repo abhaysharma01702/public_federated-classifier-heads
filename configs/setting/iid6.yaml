@@ -1,0 +1,6 @@
+# Experiment 5: 6 clients, even labels; every language keeps at least one client.
+setting_cfg:
+  partition: iid
+  clients: {mr: 2, en: 2, bn: 1, hi: 1}
+fl:
+  clients_per_round: 6

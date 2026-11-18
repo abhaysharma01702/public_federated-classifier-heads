@@ -1,0 +1,7 @@
+head,mb_per_round,fedavg_mean,gain_over_linear,median_rounds_to_0.68
+linear,1.19,0.7014,0.0,55
+cnn,2.36,0.7007,-0.0007,55
+bilstm,9.59,0.7015,0.0001,55
+cnn_bilstm,10.77,0.7006,-0.0008,75
+mlp,10.77,0.7027,0.0013,65
+attention,1.58,0.7005,-0.0009,55

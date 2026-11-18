@@ -1,0 +1,2 @@
+# FedProx: FedAvg plus the proximal term mu/2 ||w - w_global||^2; mu 0.01, a standard value, not tuned.
+strategy: {name: fedprox, mode: federated, prox_mu: 0.01}

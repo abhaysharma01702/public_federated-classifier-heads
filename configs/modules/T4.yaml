@@ -1,0 +1,10 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Tuning edge runs: cnn at 1.0e-4, bilstm at 1.0e-4, cnn_bilstm at 1.0e-4; FedAvg, seed 0, 100 rounds.
+# Predicted 1.80 GPU hours: lanes 1.80 hours (measured speeds).
+module: T4
+platform: ada
+calibrate: false
+lanes:
+  - - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn, train.lr_head=1.0e-4]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=bilstm, train.lr_head=1.0e-4]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn_bilstm, train.lr_head=1.0e-4]}

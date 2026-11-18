@@ -1,0 +1,9 @@
+# Head learning rates chosen on validation mean macro-F1. Final after T4 (11 November 2026): no 1e-4 edge run beat 3e-4.
+linear: {all: [train.lr_head=3.0e-3]}
+cnn: {all: [train.lr_head=3.0e-4]}
+mlp: {all: [train.lr_head=1.0e-3]}
+attention: {all: [train.lr_head=3.0e-3]}
+bilstm: {all: [train.lr_head=3.0e-4]}
+cnn_bilstm: {all: [train.lr_head=3.0e-4]}
+# FedAdam server learning rate from FA_TUNE (job 78445, 14 November 2026; linear, alpha 0.1, seed 0, 100 rounds): 3e-3 val 0.622, 1e-2 val 0.637 (best), 3e-2 collapsed (0.292).
+fedadam: {server_lr: 1.0e-2}

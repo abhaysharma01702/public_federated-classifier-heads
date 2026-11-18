@@ -1,0 +1,5 @@
+# Experiment 3: 12 clients as in experiment 2, label skew within each language by Dirichlet(alpha 0.1).
+setting_cfg:
+  partition: dirichlet
+  alpha: 0.1
+  clients: {mr: 5, en: 4, bn: 2, hi: 1}

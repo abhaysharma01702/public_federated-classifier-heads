@@ -1,0 +1,15 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Tuning: head learning rate for bilstm and cnn_bilstm, FedAvg, seed 0, 100 rounds.
+# Predicted 5.29 GPU hours: lanes 5.29 hours (measured speeds).
+module: T3
+platform: ada
+calibrate: false
+lanes:
+  - - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=bilstm, train.lr_head=1.0e-3]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn_bilstm, train.lr_head=1.0e-3]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=bilstm, train.lr_head=3.0e-3]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn_bilstm, train.lr_head=3.0e-3]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=bilstm, train.lr_head=3.0e-4]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn_bilstm, train.lr_head=3.0e-4]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=bilstm, train.lr_head=1.0e-2]}
+    - {experiment: E1, method: fedavg, setting: iid12, seed: 0, set: [model.head=cnn_bilstm, train.lr_head=1.0e-2]}

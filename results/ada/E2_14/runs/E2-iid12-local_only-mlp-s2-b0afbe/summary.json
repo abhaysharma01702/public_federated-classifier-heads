@@ -1,0 +1,22 @@
+{
+  "best_round": null,
+  "best_validation_mean_f1": 0.7188105479283358,
+  "hours": 1.0728,
+  "run_id": "E2-iid12-local_only-mlp-s2-b0afbe",
+  "test_best_by_language": {
+    "bn": 0.6283188005227163,
+    "en": 0.6815863536637341,
+    "hi": 0.7512213713921442,
+    "mr": 0.7647705021268557
+  },
+  "test_best_mean_f1": 0.7064742569263626,
+  "test_best_worst_f1": 0.6283188005227163,
+  "test_final_by_language": {
+    "bn": 0.6125511795344374,
+    "en": 0.6664417204361908,
+    "hi": 0.7243445545090985,
+    "mr": 0.7561770681844648
+  },
+  "test_final_mean_f1": 0.6898786306660479,
+  "test_final_worst_f1": 0.6125511795344374
+}

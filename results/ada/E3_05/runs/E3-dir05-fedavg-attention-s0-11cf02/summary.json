@@ -1,0 +1,22 @@
+{
+  "best_round": 180,
+  "best_validation_mean_f1": 0.6743109262772249,
+  "hours": 0.9466,
+  "run_id": "E3-dir05-fedavg-attention-s0-11cf02",
+  "test_best_by_language": {
+    "bn": 0.5945426798506591,
+    "en": 0.6571918450508246,
+    "hi": 0.7348763195331163,
+    "mr": 0.740474481523386
+  },
+  "test_best_mean_f1": 0.6817713314894965,
+  "test_best_worst_f1": 0.5945426798506591,
+  "test_final_by_language": {
+    "bn": 0.6025897821631989,
+    "en": 0.57927364705271,
+    "hi": 0.723492847872815,
+    "mr": 0.7464318874125077
+  },
+  "test_final_mean_f1": 0.6629470411253079,
+  "test_final_worst_f1": 0.57927364705271
+}

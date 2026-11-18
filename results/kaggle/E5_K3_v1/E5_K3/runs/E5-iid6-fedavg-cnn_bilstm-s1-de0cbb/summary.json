@@ -1,0 +1,22 @@
+{
+  "best_round": 195,
+  "best_validation_mean_f1": 0.6986652899109592,
+  "hours": 0.5907,
+  "run_id": "E5-iid6-fedavg-cnn_bilstm-s1-de0cbb",
+  "test_best_by_language": {
+    "bn": 0.6026605456506862,
+    "en": 0.6985832564005423,
+    "hi": 0.726887593294182,
+    "mr": 0.772303269292158
+  },
+  "test_best_mean_f1": 0.700108666159392,
+  "test_best_worst_f1": 0.6026605456506862,
+  "test_final_by_language": {
+    "bn": 0.592389818402974,
+    "en": 0.690238808753295,
+    "hi": 0.709819577305916,
+    "mr": 0.7706024929211249
+  },
+  "test_final_mean_f1": 0.6907626743458275,
+  "test_final_worst_f1": 0.592389818402974
+}

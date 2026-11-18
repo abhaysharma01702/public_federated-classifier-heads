@@ -1,0 +1,6 @@
+# Packages the code needs on Ada, on top of ~/envs/qm (torch, numpy, pandas, pyyaml).
+# Installed by ada/setup.sbatch with every qm package pinned as a constraint.
+transformers>=4.44,<5
+peft>=0.12
+pyarrow
+scikit-learn

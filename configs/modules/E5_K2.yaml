@@ -1,0 +1,10 @@
+# Written by scripts/make_modules.py; do not edit by hand.
+# Experiment 5 (Kaggle) part 2: 24 clients, all every round, FedAvg, seed 2, 200 rounds.
+# Predicted 6.59 GPU hours: lanes 3.99 and 2.60 hours (measured speeds).
+module: E5_K2
+platform: kaggle
+calibrate: true
+lanes:
+  - - {experiment: E5, method: fedavg, setting: iid24, seed: 2, set: [model.head=linear, fl.rounds=200, train.lr_head=3.0e-3]}
+    - {experiment: E5, method: fedavg, setting: iid24, seed: 2, set: [model.head=mlp, fl.rounds=200, train.lr_head=1.0e-3]}
+  - - {experiment: E5, method: fedavg, setting: iid24, seed: 2, set: [model.head=cnn_bilstm, fl.rounds=200, train.lr_head=3.0e-4]}
